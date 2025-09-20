@@ -1,0 +1,64 @@
+.footer{
+    font-weight: 200;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 12.5% 20px 12.5%;
+    width: 100vw;
+    margin: auto;
+    background-color: rgba(66, 66, 66, 0.133);
+    backdrop-filter: blur(50px);
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-top-left{
+     width: 30%;
+     padding-left: 20px;
+     padding-top: 20px;
+     background-color: rgba(76, 76, 76, 0);
+}
+.footer-top-left img{
+
+    height:64px;
+    width: 64px;
+    padding: 5px;
+    cursor: pointer;
+}
+.github-icon{
+
+    filter: invert(1) brightness(110%);
+}
+
+
+.footer-top-right ol{
+
+
+    list-style: none;
+        display: flex;
+    flex-direction: row;
+    gap: 40px;
+   
+   
+}
+.footer-top-right ol li{
+
+ cursor: pointer;
+     text-decoration-color: rgba(55, 237, 113, 0);
+     transition: all  0.3s ;
+}
+   
+.footer-top-right ol li:hover{
+    transform: translateY(-7px);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+
+    
+    text-decoration-color: rgb(0, 255, 38);
+   
+   
+}

@@ -1,0 +1,61 @@
+
+.projects{
+
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin : 10vh auto;
+    padding-bottom: 10vh;
+  
+}
+
+.project-title{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 3rem;
+    padding: 100px;
+    text-align: center;
+
+}
+
+.project-title img{
+
+   position: absolute; 
+    top: 40%;
+    left: 52%;
+    
+   
+    transform: scale(150%);
+    z-index: -1;
+
+}
+.project-content{
+
+
+    display: flex;
+    flex-direction: row;
+
+    
+    gap: 100px
+   
+}
+.project_img{
+
+    border-radius: 10px;
+    border: rgb(55, 237, 113) 5px solid;
+    box-shadow: 4px 4px 10px 2px  rgb(6, 220, 31);
+    width: 400px;
+    height: 480px;
+    cursor: pointer;
+}
+.project-details{
+
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+}
+.TheGreen{
+    color: rgb(55, 237, 113);
+}

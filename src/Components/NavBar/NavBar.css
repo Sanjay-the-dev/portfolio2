@@ -1,0 +1,61 @@
+.NavBar{
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: inline-flex;
+    z-index: 1;
+    justify-content: space-around;
+    align-content: center;
+    padding: 30px 40px;
+    
+    background-color: hsla(0, 0%, 17%, 0.413);
+    backdrop-filter: blur(20px);
+    
+}
+
+.NavMenu{
+
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    list-style-type: none;
+    color: rgb(225, 241, 202);
+    cursor: pointer;
+    font-size: 1.2rem;
+
+
+}
+.NavMenu li{
+
+    transition: all 0.5s ease-in-out;
+    border: 2px solid transparent;
+    padding-bottom: 5px;
+    transition: border-color 0.3s ease-out;
+}
+.NavMenu li:hover{
+
+    color: aqua;
+    border-radius: 1px;
+    border-bottom: 2px solid aqua;
+    transition: border-color 0.3s ease-in;
+
+
+}
+
+.ConnectWithMeBtn{
+    color: #cef1b6;
+    font-size: 1.2rem;
+    margin: 0 40px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    background: linear-gradient(140deg,  hsl(328, 100%, 50%) , #9c00fd  );
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ConnectWithMeBtn:hover{
+
+    transform: scale(110%);
+}
