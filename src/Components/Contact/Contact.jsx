@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import theme_pattern from '../../assets/main assets/theme_pattern.svg'
 import mail_icon from '../../assets/gmail.png'
 import call_icon from '../../assets/mobile.png'
@@ -33,6 +34,46 @@ const Contact = () => {
     }
   };
 
+
+    const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const onSubmits = (e) => {
+    e.preventDefault();
+    
+    // Simple validation: check if any field is empty
+    const { name, email, number, message } = formData;
+    if (!name || !email || !number || !message) {
+      alert("Please fill in all fields before submitting.");
+      return; // stop submission
+    }
+    else{
+
+          console.log("Form submitted:", formData);
+    onSubmit();
+    // Here you can send formData to your API or backend
+
+    // Optionally clear the form after submission
+   // setFormData({ name: "", email: "", number: "", message: "" });
+
+    }
+
+
+  };
+
+
   
   return (
     <div id='Contact' className='contact'>
@@ -58,30 +99,59 @@ const Contact = () => {
 
             </div>  
 
+            
+
+
             <div className="contact-right">
 
-              <form onSubmit={onSubmit} className="contact-form">
-                <label htmlFor="name">Name</label>
-            
-                <input id='name' name='Name:' type="text "  autoComplete='off'  placeholder='Enter your name' />
-            
+ <form onSubmit={onSubmits} className="contact-form">
+      <label htmlFor="name">Name</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        autoComplete="off"
+        placeholder="Enter your name"
+        value={formData.name}
+        onChange={handleChange}
+      />
 
-                <label htmlFor="gmail">Email</label>
-          
-                <input type="email" name ="e-mail:" id="gmail"  autoComplete='off'  placeholder='Enter your email'/>
+      <label htmlFor="gmail">Email</label>
+      <input
+        id="gmail"
+        name="email"
+        type="email"
+        autoComplete="off"
+        placeholder="Enter your email"
+        value={formData.email}
+        onChange={handleChange}
+      />
 
-                <label htmlFor="number">Contact</label>
-                <input type="number" name="Number:" id='text' autoComplete='off' placeholder='Enter your number '/>
+      <label htmlFor="number">Contact</label>
+      <input
+        id="number"
+        name="number"
+        type="number"
+        autoComplete="off"
+        placeholder="Enter your number"
+        value={formData.number}
+        onChange={handleChange}
+      />
 
-               <br />
-                <label htmlFor="message">Write you message</label> 
-                <textarea name="message" id="message" autoComplete='off' rows={8} cols={37} placeholder='Write you message...'></textarea>
+      <label htmlFor="message">Write your message</label>
+      <textarea
+        id="message"
+        name="message"
+        autoComplete="off"
+        rows={8}
+        cols={37}
+        placeholder="Write your message..."
+        value={formData.message}
+        onChange={handleChange}
+      />
 
-                <button type='submit'>Submit</button>
-
-              
-
-              </form>
+      <button type="submit">Submit</button>
+    </form>
 
             </div>
         </div>
