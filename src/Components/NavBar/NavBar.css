@@ -1,17 +1,23 @@
 .NavBar{
 
     position: fixed;
+    margin: 0;
     top: 0;
     width: 100vw;
-    display: inline-flex;
+    height: 100px;
+    display: flex;
     z-index: 1;
     justify-content: space-around;
     align-content: center;
     padding: 30px 40px;
     
     background-color: hsla(0, 0%, 17%, 0.413);
-    backdrop-filter: blur(20px);
-    
+/*     backdrop-filter: blur(20px);
+ */    
+}
+
+.nav-mob-close, .nav-mob-open{
+    display: none;
 }
 
 .NavMenu{
@@ -23,9 +29,9 @@
     color: rgb(225, 241, 202);
     cursor: pointer;
     font-size: 1.2rem;
-
-
 }
+
+
 .NavMenu li{
 
     transition: all 0.5s ease-in-out;
@@ -33,6 +39,7 @@
     padding-bottom: 5px;
     transition: border-color 0.3s ease-out;
 }
+
 .NavMenu li:hover{
 
     color: aqua;
@@ -58,4 +65,73 @@
 .ConnectWithMeBtn:hover{
 
     transform: scale(110%);
+}
+
+/* Mobile View */
+
+@media (max-width: 768px) {
+    .NavBar{
+        position: fixed;
+       
+        top: 0;
+        margin: 0;
+        
+    }
+    .NavMenu, .NavMenu li, .NavMenu button, .nav-mob-close, .nav-mob-open {
+        -webkit-tap-highlight-color: transparent; 
+    }
+    .ConnectWithMeBtn{
+        display: none;
+    }
+    .nav-mob-open{
+        display: block;
+        position: fixed;
+        right: 20px;
+     
+    }
+    .nav-mob-close{
+
+        display: block;
+        
+        padding: 5px;
+        position: absolute;
+        top: 30px;
+        left: 130px;
+        width: 40px;
+     
+    }
+
+    .NavMenu{
+        position: relative;
+        right:-450px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(52, 52, 52);
+    
+       align-items: center;
+        height: 100vh;
+        width: 350px;
+        z-index: 2;
+        transition: all .5s ease-in-out;
+        gap: 2rem;
+    }
+    .NavMenu li{
+        padding-top: 50px;
+        font-size: 30px;
+        padding: 0px;
+        flex-direction: row;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .NavMenu ul {
+        padding-top: 100px;
+        font-size: 30px;
+        padding: 0px;
+        flex-direction: row;
+        gap: 20px;
+        text-align: center;
+    }
+    
 }
