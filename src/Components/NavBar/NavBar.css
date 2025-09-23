@@ -4,7 +4,6 @@
     margin: 0;
     top: 0;
     width: 100vw;
-    height: 100px;
     display: flex;
     z-index: 1;
     justify-content: space-around;
@@ -12,8 +11,8 @@
     padding: 30px 40px;
     
     background-color: hsla(0, 0%, 17%, 0.413);
-/*     backdrop-filter: blur(20px);
- */    
+    backdrop-filter: blur(20px);
+    
 }
 
 .nav-mob-close, .nav-mob-open{
@@ -72,13 +71,12 @@
 @media (max-width: 768px) {
     .NavBar{
         position: fixed;
-       
         top: 0;
         margin: 0;
         
     }
     .NavMenu, .NavMenu li, .NavMenu button, .nav-mob-close, .nav-mob-open {
-        -webkit-tap-highlight-color: transparent; 
+        -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile */
     }
     .ConnectWithMeBtn{
         display: none;
@@ -94,7 +92,7 @@
         display: block;
         
         padding: 5px;
-        position: absolute;
+        position: relative;
         top: 30px;
         left: 130px;
         width: 40px;
@@ -102,13 +100,13 @@
     }
 
     .NavMenu{
-        position: relative;
+        position: fixed;
         right:-450px;
         top: 0;
         display: flex;
         flex-direction: column;
         background-color: rgb(52, 52, 52);
-    
+        backdrop-filter: blur(50px);
        align-items: center;
         height: 100vh;
         width: 350px;
@@ -117,16 +115,7 @@
         gap: 2rem;
     }
     .NavMenu li{
-        padding-top: 50px;
-        font-size: 30px;
-        padding: 0px;
-        flex-direction: row;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .NavMenu ul {
-        padding-top: 100px;
+        padding-top: 1rem;
         font-size: 30px;
         padding: 0px;
         flex-direction: row;
