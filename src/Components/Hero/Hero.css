@@ -56,6 +56,9 @@
    background-color: #25adc2;
    border: rgb(0, 200, 255) 2px solid;
 }
+.HeroSection a:link{
+    text-decoration: none;
+}
 .hero-resume{
     display: flex;
     align-items: center;
