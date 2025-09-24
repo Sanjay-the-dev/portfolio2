@@ -192,8 +192,8 @@ textarea:-webkit-autofill:focus {
 .contact-title img{
 
     position: absolute; 
-    top: 20px;
-    left: 120px;
+    top: 10px;
+    left: 130px;
     transform: scale(60%);
     z-index: -1;
     
@@ -248,7 +248,8 @@ textarea:-webkit-autofill:focus {
     padding: 10px; 
     color: rgb(212, 210, 210);
 
-    font-size: inherit;
+    font-size: 1.1rem;
+    font-weight: 200;
     margin-bottom: .5rem;
     background-color: rgb(66, 66, 66);
     border-radius: 5px;
@@ -282,22 +283,22 @@ textarea:-webkit-autofill:focus {
 }
 
 .contact-form textarea{
-
+    font-size: 1.2rem;
     width: 350px;
     padding: 10px;
 }
 
 .contact-form button[type = "submit"]{
 
-    width: 200px;
+    width: 140px;
     color: #d4ffdc;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 40px;
     border: none;
     padding: 10px;
     background: linear-gradient(140deg, hsl(324, 96%, 50%), hsl(277, 89%, 46%));
     transition: all 0.3s ease-in-out;
-    margin: 20px 10px;
+    margin: 20px 0px;
 
 }
 .contact-form button[type= "submit"]:hover{
