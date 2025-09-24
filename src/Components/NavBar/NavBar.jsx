@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     
     <div className='NavBar'>
-
+      <h1 className='portfolio-title'>Portfolio</h1>
       <img className='nav-mob-open' onClick={openMenu} src={menu_open} alt="" />
 
        <ul className='NavMenu' ref={menuRef} >

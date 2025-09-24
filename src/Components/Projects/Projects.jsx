@@ -17,8 +17,8 @@ const Projects = () => {
 
         <div className="project-details">
 
-          <h1><span className='TheGreen'> Title:</span> To-Do List</h1>
-            <br />
+          <h1 className='project-content-title' ><span className='TheGreen'> Title:</span> To-Do List</h1>
+            <br className='title-discription-br' />
           <p><span className='TheGreen' >Discription :</span><br/>The To-Do List App is a web application that allows users to manage their daily tasks. It was built using HTML, CSS, and JavaScript to practice core frontend concepts.
           </p>
 

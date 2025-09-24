@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <hr />
+          <hr className='footer-hr' />
           <p>© 2025 Sanjay. All rights reserved</p>
         </div>
     </div>

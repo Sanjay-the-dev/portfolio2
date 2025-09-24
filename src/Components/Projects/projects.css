@@ -59,3 +59,86 @@
 .TheGreen{
     color: rgb(55, 237, 113);
 }
+
+  /*  Mobile View */
+
+@media (max-width:768px){
+    
+.projects{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin : 10vh auto;
+    padding: 0 26px;
+    
+  
+}
+
+.project-title{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.2rem;
+    padding: 100px 0 20px 0 ;
+
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+.project-title img{
+
+   position: absolute; 
+    top:90px;
+    left: 100px;
+    
+   
+    transform: scale(60%);
+    z-index: -1;
+
+}
+.project-content{
+
+
+    display: flex;
+    flex-direction: column;
+
+    
+    gap: 20px
+   
+}
+.project_img{
+
+    border-radius: 10px;
+    display: inline-block;
+    border: rgb(55, 237, 113) 5px solid;
+    box-shadow: 4px 4px 10px 2px  rgb(6, 220, 31);
+    width: 200px;
+    height: 240px;
+    cursor: pointer;
+}
+.project-details{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+}
+.project-details h1{
+
+    font-size: 1.5rem;
+     
+}
+.title-discription-br{
+    display: none;
+}
+.TheGreen{
+    color: rgb(55, 237, 113);
+}
+.features{
+
+    padding-left: 10px;
+}
+}

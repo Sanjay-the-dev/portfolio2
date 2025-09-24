@@ -42,3 +42,58 @@
     border-radius: 50px;
     margin: 0 0 16px 0;
 }
+
+
+   /*  // Mobile View */
+
+@media (max-width:768px){
+
+.About{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    margin : 10vh auto;
+    padding: 0 26px;
+    align-items: center;
+}
+
+.about-title{
+
+    
+    position: relative;
+    font-size: 1.2rem;
+    padding: 50px;
+
+}
+.about-title img{
+
+
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    transform: scale(60%);
+    z-index: -1;
+}
+
+.about-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.2rem;
+}
+.about-para {
+
+    line-height: 28px;
+    font-weight: 200;
+    margin-bottom: 80px;
+}
+.about-section hr{
+
+    border: rgb(8, 182, 240) 3px solid;
+    border-radius: 50px;
+    margin: 0 0 16px 0;
+}
+
+
+}
