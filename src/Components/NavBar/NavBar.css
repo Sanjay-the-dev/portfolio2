@@ -8,7 +8,7 @@
     z-index: 1;
     justify-content: space-around;
     align-content: center;
-    padding: 30px 40px;
+    padding: 20px 40px;
     
     background-color: hsla(0, 0%, 17%, 0.413);
     backdrop-filter: blur(20px);
@@ -62,6 +62,7 @@
     background: linear-gradient(140deg,  hsl(328, 100%, 50%) , #9c00fd  );
     border: none;
     cursor: pointer;
+    outline: none;
     transition: 0.5s;
 }
 
