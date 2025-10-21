@@ -74,6 +74,17 @@
 /* Mobile View */
 
 @media (max-width: 768px) {
+
+/*     .NavMenu:focus, .NavMenu:hover,.NavMenu:active{
+
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    list-style-type: none;
+    color: rgb(225, 241, 202);
+    cursor: pointer;
+    font-size: 1.2rem;
+} */
     .NavBar{
         position: fixed;
         top: 0;

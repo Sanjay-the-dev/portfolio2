@@ -15,6 +15,9 @@
     padding: 50px;
 
 }
+.E-about-title-text{
+    position: relative;
+}
 .about-title img{
 
 
@@ -39,6 +42,7 @@
 .about-section hr{
 
     border: rgb(8, 182, 240) 3px solid;
+    opacity: 1;
     border-radius: 50px;
     margin: 0 0 16px 0;
 }
@@ -61,17 +65,21 @@
 .about-title{
 
     
-    position: relative;
+    
     font-size: 1.2rem;
     padding: 50px;
 
+}
+
+.E-about-title-text{
+    position: relative;
 }
 .about-title img{
 
 
     position: absolute;
-    top: 40px;
-    left: 80px;
+    top: 50px;
+    left: 120px;
     transform: scale(60%);
     z-index: -1;
 }
@@ -91,6 +99,7 @@
 .about-section hr{
 
     border: rgb(8, 182, 240) 3px solid;
+    opacity: 1;
     border-radius: 50px;
     margin: 0 0 16px 0;
 }

@@ -1,12 +1,19 @@
 import React from 'react'
 import { useState } from 'react'
-import theme_pattern from '../../assets/main assets/theme_pattern.svg'
+/* import theme_pattern from '../../assets/main assets/theme_pattern.svg' */
 import mail_icon from '../../assets/gmail.png'
 import call_icon from '../../assets/mobile.png'
 import location_icon from '../../assets/location.png'
 import './Contact.css'
+import { Toast,ToastBody,ToastContainer } from 'react-bootstrap'
 
 const Contact = () => {
+
+  const email = "sanjay525522@gmail.com";
+  const phone = "+91 9025979021";
+const [show_W , setShow_W] = useState(false);
+const [show_A , setShow_A] = useState(false);
+
 const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,7 +37,9 @@ const [formData, setFormData] = useState({
     // Validation: check if any field is empty
     const { name, email, number, message } = formData;
     if (!name || !email || !number || !message) {
-      alert("Please fill in all fields before submitting.");
+     /*  alert("Please fill in all fields before submitting."); */
+
+      setShow_W(true);
       return;
     }
 
@@ -54,7 +63,8 @@ const [formData, setFormData] = useState({
 
       if (resultData.success) {
         setResult("Form Submitted Successfully");
-        window.alert(resultData.message);
+        /* window.alert(resultData.message); */
+        setShow_A(true);
         setFormData({ name: "", email: "", number: "", message: "" }); // clear form
       } else {
         setResult("Error: " + resultData.message);
@@ -68,9 +78,27 @@ const [formData, setFormData] = useState({
 
   return (
     <div id="Contact" className="contact">
+
+
+      <ToastContainer className=" position-fixed top-0  start-50 p-3" position={ 'top-center'} style={{ zIndex: 1 }}>
+    <Toast onClose={() => setShow_A(false)} show={show_A} delay={3000} autohide>
+      <Toast.Body className={'bg-success text-light text-center fs-6'}>Form Submitted Successfully</Toast.Body>
+    </Toast>
+  </ToastContainer>
+
+
+
+  <ToastContainer className=' position-fixed top-0 start-50 p-3' position= { 'top-center'} style={{ zIndex: 1 }}>
+    <Toast onClose={()=>{setShow_W(false); }} show={show_W} delay={3000} autohide>
+      <ToastBody className={'bg-danger text-light text-center fs-6 '} >Please fill the form Properly</ToastBody>
+    </Toast>
+  </ToastContainer>
+
+
+
+
       <div className="contact-title">
-        <h1>Get in touch</h1>
-        <img src={theme_pattern} alt="" />
+        <h1 className='display-1 text-primary '>Get in touch</h1>
       </div>
 
       <div className="contact-section">
@@ -82,12 +110,19 @@ const [formData, setFormData] = useState({
           <br />
           <div className="contact-items">
             <img src={mail_icon} alt="" />
-            <p>sanjay525522@gmail.com</p>
+            <p>
+              
+              <a href={`mailto:${email}`} className='nav-link' target="_blank" rel="noopener noreferrer">
+                {email}
+              </a>
+            </p>
           </div>
           <br />
           <div className="contact-items">
             <img src={call_icon} alt="" />
-            <p>9025979021</p>
+              <p>
+               <a href={`tel:${phone}`} className='nav-link'>{phone}</a>
+             </p>
           </div>
           <br />
           <div className="contact-items">
@@ -145,7 +180,7 @@ const [formData, setFormData] = useState({
             />
 
             <button type="submit">Submit</button>
-            <p>{result}</p>
+            <p className='d-none'>{result}</p>
           </form>
         </div>
       </div>
