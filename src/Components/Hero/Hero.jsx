@@ -2,7 +2,7 @@ import React from 'react'
 import './Hero.css'
 import { Link } from 'react-scroll';
 import downloadIcon from '../../assets/download-icon1.png'
-import resume_pdf from '../../assets/Resume/sanjay_resume_22_11.pdf'
+import resume_pdf from '../../assets/Resume/resume2211.pdf'
 
 const Hero = () => {
   return (
