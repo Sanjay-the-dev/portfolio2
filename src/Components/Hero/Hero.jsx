@@ -2,7 +2,7 @@ import React from 'react'
 import './Hero.css'
 import { Link } from 'react-scroll';
 import downloadIcon from '../../assets/download-icon1.png'
-import resume_pdf from '../../assets/Resume/me-resume-21-10.pdf'
+import resume_pdf from '../../assets/Resume/sanjay_resume_22_11.pdf'
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="hero-action">
           <Link className="nav-link" to ="Contact"  duration ={700} offset ={-100}><div className='hero-connect'>Connect</div></Link>
           
-          <a className ='resume_pdf_a'href={resume_pdf} download="Resume-sanjay-21-9.pdf"><div className='hero-resume'>My resume <img src= {downloadIcon}  /> </div></a>
+          <a className ='resume_pdf_a'href={resume_pdf} download="Resume-sanjay.pdf"><div className='hero-resume'>My resume <img src= {downloadIcon}  /> </div></a>
           
             
         </div>

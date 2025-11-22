@@ -2,7 +2,7 @@ import React from 'react'
 import './projects.css'
 /* import theme_pattern from '../../assets/main assets/theme_pattern.svg' */
 import project_img1 from '../../assets/Project Images/E-commerce.jpg'
-import project_img2 from '../../assets/Project Images/Weather.jpg'
+import project_img2 from '../../assets/Project Images/Wellness_img.jpg'
 import project_img3 from '../../assets/Project Images/project-img.png'
 
 const Projects = () => {
@@ -58,18 +58,18 @@ const Projects = () => {
 
       <div className="project-content" >
 
-        <a href="https://weatherapp631.netlify.app">
-        <img src={project_img2} alt="" className='project_img2'/>
+        <a href="https://wellness-and-habit-tracker.netlify.app">
+        <img src={project_img2} alt="" className='project_img1'/>
         </a>
 
         <div className="project-details">
 
-          <h1 className='project-content-title' ><span className='TheGreen'> Title:</span> Weather app</h1>
+          <h1 className='project-content-title' ><span className='TheGreen'> Title:</span>Wellness & Habit Tracking </h1>
             <br className='title-discription-br' />
-          <p><span className='TheGreen' >Discription :</span><br/>A modern and responsive weather application that provides real-time weather information for any city. Built with React.js and integrated with a public weather API, the app allows users to search for locations and get accurate weather data instantly.
+          <p><span className='TheGreen' >Discription :</span><br/>The application allows users to track daily habits such as water intake, meditation, exercise, and screen time, with real-time UI updates and persistent storage through localStorage.Implemented a weekly analytics dashboard using Recharts, visualizing habit completion trends across the last seven days. Integrated React-Toastify for interactive motivational notifications and added a Dark/Light mode toggle for enhanced user accessibility.
           </p>
             <br  />
-          <p><span className='TheGreen' >Development Tools & Languages:</span><br/> React.js, HTML5,  CSS3, JavaScript (ES6+), node.js, npm ,Vite.
+          <p><span className='TheGreen' >Development Tools & Languages:</span><br/> HTML5, CSS3,JavaScript(ES6+), React.js ,Redux Toolkit, Bootstrap , React-router, Recharts and Bootstrap
           </p>
 
 
@@ -77,9 +77,10 @@ const Projects = () => {
 
           <ul className='features'>
             <h1 className='TheGreen'>Features</h1>
-            <li>🌡️ Current Weather: Displays temperature, humidity, wind speed, and weather conditions.</li>
-            <li>🌍 City Search: Users can search for any city worldwide.</li>
-            <li>🌐 API Integration: Fetches live data from OpenWeatherMap (or any other weather API).</li>
+            <li>Daily habit tracking with Redux global state management.</li>
+            <li>Persistent data storage using localStorage</li>
+            <li>Weekly progress visualization using Bar Charts (Recharts)</li>
+            <li>Dark/Light theme switcher with dynamic styling.</li>
          
           </ul>
         </div>
