@@ -27,31 +27,45 @@
 
     display: flex;
     align-items: center;
-    gap: 10rem;
+    gap: 8rem;
     list-style-type: none;
     color: rgb(225, 241, 202);
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 
-.NavMenu li{
-
-    transition: all 0.5s ease-in-out;
-    border: 2px solid transparent;
-    padding-bottom: 5px;
-    transition: border-color 0.3s ease-out;
+.E-nav-link{
+    
+    transition: color 0.3s ease-in-out;
+    padding: 5px 0.5rem;
+    position: relative;
+    color: rgb(225, 241, 202);
+    text-decoration: none;
 }
 
-.NavMenu li:hover{
-
-    color: aqua;
-    border-radius: 1px;
-    border-bottom: 2px solid aqua;
-    transition: border-color 0.3s ease-in;
-
-
+.E-nav-link::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(10, 223, 3);
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 5px;
+    border-radius: 10px;
+    transition: width 0.3s ease-in;
 }
+
+
+.E-nav-link:hover{
+    color: rgb(10, 223, 3);
+}
+
+.E-nav-link:hover::after{
+
+    width: 100%;
+}
+
 
 .ConnectWithMeBtn{
     color: #cef1b6;

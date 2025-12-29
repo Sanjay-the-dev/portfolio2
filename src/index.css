@@ -4,7 +4,8 @@ body{
    
     width: 100vw;
     height: 100vh;
-    background-color: hsl(0, 0%, 11%);
+    /* background-color: hsl(0, 0%, 11%); */
+    background-color: #020106;
 
     background-attachment: fixed;
     background-size: cover;

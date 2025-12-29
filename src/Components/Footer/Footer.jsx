@@ -21,10 +21,10 @@ const Footer = () => {
 
           <div className="footer-top-right">
             <ol>
-              <li><Link className= "nav-link"  offset={-250} to = "Home">Home</Link></li>
-              <li><Link className = "nav-link "  offset = {-50} to = "About">About</Link></li>
-              <li><Link className = "nav-link"  offset={-20} to ="Projects">Project</Link></li>
-              <li><Link className= "nav-link"  offset={-20} to = "Contact">Contact</Link></li>
+              <li><Link className= "footer-link"  offset={-250} to = "Home">Home</Link></li>
+              <li><Link className = "footer-link "  offset = {-50} to = "About">About</Link></li>
+              <li><Link className = "footer-link"  offset={-20} to ="Projects">Project</Link></li>
+              <li><Link className= "footer-link"  offset={-20} to = "Contact">Contact</Link></li>
             </ol>
           </div>
 

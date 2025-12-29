@@ -36,32 +36,28 @@
 
 .footer-top-right ol{
 
-
     list-style: none;
-        display: flex;
+    display: flex;
     flex-direction: row;
     gap: 40px;
-   
-   
-}
-.footer-top-right ol li{
-
- cursor: pointer;
-     text-decoration-color: rgba(55, 237, 113, 0);
-     transition: all  0.3s ;
-}
-   
-.footer-top-right ol li:hover{
-    transform: translateY(-7px);
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 2px;
-
     
-    text-decoration-color: rgb(0, 255, 38);
-   
-   
 }
+
+.footer-link{
+    display: inline-block;  
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in , transform 0.2s ease-in ;
+}
+
+.footer-link:hover{
+
+    transform: translateY(-5px);
+    font-weight: 400;
+    color: orange;
+}
+
 
    /*   //Mobile View */
 
