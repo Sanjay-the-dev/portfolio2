@@ -19,18 +19,18 @@ const About = () => {
                 <br />
                 <div className='row ps-md-5 ms-md-3'>
                   <div className="col">
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> HTML5 </p> </div>
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> CSS3</p>  </div>
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> JavaScript </p>  </div>
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> React.js</p> </div>
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> Git & Github</p> </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> CSS3</p>  </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> JavaScript </p>  </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> HTML5 </p> </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> React.js</p> </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> Git & Github</p> </div>
                   </div>
 
                   <div className="col">
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> Redux Toolkit</p> </div>
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> Bootstrap </p> </div>
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> TailwindCSS</p> </div>
-                    <div className="about-skills"><p> <span className='px-2'>➤ </span> React-router</p>  </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> Redux Toolkit</p> </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> Bootstrap </p> </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> TailwindCSS</p> </div>
+                    <div className="about-skills"><p> <span className='px-2 text-success'>➤ </span> React-router</p>  </div>
                   </div>
                 </div>
             </div>

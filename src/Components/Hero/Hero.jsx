@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 import downloadIcon from '../../assets/download-icon1.png'
 import resume_pdf from '../../assets/Resume/Sanjay_Frontend_developer_resume.pdf'
 import { useRef , useEffect } from 'react';
-import  background_image from "../../assets/BG-img/bg-img-hero.png"
+
 const Hero = () => {
 
 
@@ -46,7 +46,7 @@ const Hero = () => {
                
         </div>
 
-        <img className='hero-bg' src={background_image} alt="" width={"600"} height={"auto"} />
+        <img className='hero-bg' src="/BG-img/bg-img-hero.webp" alt="" width={"600"} height={"auto"}  fetchPriority='high' decoding='async' />
 
 
     </div>

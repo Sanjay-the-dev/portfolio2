@@ -1,9 +1,9 @@
 import React from 'react'
 import './projects.css'
 /* import theme_pattern from '../../assets/main assets/theme_pattern.svg' */
-import project_img1 from '../../assets/Project Images/E-commerce.jpg'
-import project_img2 from '../../assets/Project Images/Wellness_img.jpg'
-import project_img3 from '../../assets/Project Images/project-img.png'
+import project_img1 from '../../assets/Project Images/e-commerce-img.png'
+import project_img2 from '../../assets/Project Images/wellness-img.png'
+import project_img3 from '../../assets/Project Images/jewellery-shop-img.png'
 
 const Projects = () => {
   return (
@@ -87,22 +87,23 @@ const Projects = () => {
       </div>
 
 
-            {/*   project -3   */}
+            {/*   project - 3 */}
 
-      <div className="project-content">
 
-        <a href="https://todolist388.netlify.app">
-        <img src={project_img3} alt="" className='project_img3'/>
+      <div className="project-content" >
+
+        <a href="https://wellness-and-habit-tracker.netlify.app">
+        <img src={project_img3} alt="" className='project_img1'/>
         </a>
 
         <div className="project-details">
 
-          <h1 className='project-content-title' ><span className='TheGreen'> Title:</span> To-Do List</h1>
+          <h1 className='project-content-title' ><span className='TheGreen'> Title:</span>Jewellery Shop</h1>
             <br className='title-discription-br' />
-          <p><span className='TheGreen' >Discription :</span><br/>The To-Do List App is a web application that allows users to manage their daily tasks. It was built using HTML, CSS, and JavaScript to practice core frontend concepts.
+          <p><span className='TheGreen' >Discription :</span><br/>Designed a jewellery shop website using HTML, CSS, JavaScript, and Bootstrap. Implemented lazy loading and infinite scroll using the IntersectionObserver API to enhance performance and user experience. Optimized layout and animations with a clean, well-organized file structure, ensuring smooth scrolling, efficient loading, and a visually clean UI while handling multiple product images.
           </p>
             <br  />
-          <p><span className='TheGreen' >Development Tools & Languages:</span><br/> React.js, HTML5,  CSS3, JavaScript (ES6+), node.js, npm ,Vite.
+          <p><span className='TheGreen' >Development Tools & Languages:</span><br/> HTML5, CSS3, JavaScript(ES6+) and Bootstrap.
           </p>
 
 
@@ -110,14 +111,17 @@ const Projects = () => {
 
           <ul className='features'>
             <h1 className='TheGreen'>Features</h1>
-            <li>Add Tasks – Users can type a task and add it to the list dynamically.</li>
-            <li>Delete & rearrange Tasks – Tasks can be removed or rearranged from the list anytime.</li>
-            <li>Local Storage used – Tasks remain saved even after refreshing the page.</li>
-            <li>Responsive Layout – Works across mobile and desktop devices.</li>
+            <li>Focus on visual presentation using HTML5, CSS3 and Bootstrap</li>
+            <li>IntersectionObserver are used to implement image lazy loading, ensuring images load only when they enter the viewport.</li>
+            <li>Smooth scrolling and subtle animations, Optimized transitions for better visual flow.</li>
+
          
           </ul>
         </div>
       </div>
+
+
+
     </div>
   )
 }

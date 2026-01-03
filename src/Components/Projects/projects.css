@@ -63,15 +63,15 @@
     border-radius: 10px;
     border: rgb(74, 74, 74) 5px solid;
     width: 500px;
-    height: 360px;
+    height: auto;
     cursor: pointer;
 }
 .project_img2{
 
     border-radius: 10px;
     border: rgb(103, 103, 103) 5px solid;
-    width: 400px;
-    height: 480px;
+    width: 500px;
+    height: auto;
     cursor: pointer;
 }
 .project_img3{
