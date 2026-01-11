@@ -40,7 +40,7 @@
     transition: color 0.3s ease-in-out;
     padding: 5px 0.5rem;
     position: relative;
-    color: rgb(225, 241, 202);
+    color: rgb(243, 245, 240);
     text-decoration: none;
 }
 
@@ -89,16 +89,7 @@
 
 @media (max-width: 768px) {
 
-/*     .NavMenu:focus, .NavMenu:hover,.NavMenu:active{
 
-    display: flex;
-    align-items: center;
-    gap: 10rem;
-    list-style-type: none;
-    color: rgb(225, 241, 202);
-    cursor: pointer;
-    font-size: 1.2rem;
-} */
     .NavBar{
         position: fixed;
         top: 0;
@@ -119,55 +110,56 @@
         position: fixed;
         top: 15px;
         right: 20px;
-     
+        
     }
     .nav-mob-close{
 
-        display: block;
+        display: inline-block;
         
         padding: 5px;
         position: relative;
-        top: 30px;
-        left: 130px;
-        width: 40px;
+        top: -5px;
+        left: 95px;
+        width: 35px;
      
     }
 
     .NavMenu{
+        backdrop-filter: blur(10px);
         position: fixed;
         right:-450px;
         top: 0;
         display: flex;
         flex-direction: column;
-        background-color: rgb(52, 52, 52);
-       align-items: center;
+        background-color: rgba(0, 0, 0, 0.959);
         height: 100vh;
-        width: 350px;
-        z-index: 2;
+        min-width: 280px;
         transition: all .5s ease-in-out;
-        gap: 2rem;
+        gap: 1.7rem;
+        padding-left: 0;
     }
+    
     .NavMenu li{
         padding-top: 1rem;
-        font-size: 30px;
-        border-bottom: 3px solid #4f494f;
-
-        width: 80%;
-        padding: 0 0 10px 0 ;
-       
-        flex-direction: row;
-       
-        color: rgb(225, 241, 202);
-        text-align: center;
-    }
-        .NavMenu, .NavMenu li,  .nav-mob-close, .nav-mob-open {
-        -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile */
-
-    }
-    .NavMenu li:hover{
-        color: rgb(225, 241, 202);
-        border-bottom: 3px solid #4f494f;
+        font-size: 25px;
+        border-bottom: 4px solid #444444;
+        width: 100%;
+        padding: 0 25px  ;
+          
         
     }
+
+.E-nav-link{
+
+    padding-left: 30px;
+}
+.E-nav-link:hover{
+    color:#f2f4ef;
+}
+
+.E-nav-link:hover::after{
+
+    width: 0%;
+}
     
 }

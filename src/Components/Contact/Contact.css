@@ -3,7 +3,9 @@
     display: flex;
     flex-direction: column;
     width: 75vw;
-    margin: 0 auto 5% auto;
+    margin : 10vh auto;
+    padding-bottom: 10vh;
+    align-items: center;
 }
 .contact-section{
     display: flex;
@@ -12,13 +14,13 @@
 
 .contact-title{
 
-     display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+
     position: relative;
     font-size: 3rem;
-    padding: 100px;
+    padding: 100px 0;
     text-align: center;
+    width: 100vw;
 }
 .contact-title-left {
     
@@ -147,6 +149,48 @@ textarea:-webkit-autofill:focus {
     transform: scale(103%);
 
 }
+
+
+   /*  // animation */
+
+.title-slide-down{
+    
+    display: inline-block;
+    position: absolute;
+    left:  -30%;
+    width: 80%;
+    color: transparent;
+    background-color: #0d6efd;
+    transform: skewx(50deg);
+    transition: transform 1.5s ease-in-out;
+    
+}
+.title-slide-down.visible{
+    
+
+    transform: skewx(50deg) translateY(105%);
+    
+}
+.title-slide-up{
+    
+    display: inline-block;
+    position: absolute;
+    right:  -30%;
+    width: 80%;
+    color: transparent;
+    background-color: #0d6efd;
+    transform: skewx(50deg);
+    transition: transform 1.5s ease-in-out ;
+    
+}
+.title-slide-up.visible{
+    
+
+    transform: skewx(50deg) translateY(-105%);
+    
+}
+
+
 
 @media (max-width:768px){
 

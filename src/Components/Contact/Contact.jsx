@@ -6,8 +6,10 @@ import call_icon from '../../assets/mobile.png'
 import location_icon from '../../assets/location.png'
 import './Contact.css'
 import { Toast,ToastBody,ToastContainer } from 'react-bootstrap'
+import { useRef, useEffect } from 'react'
 
 const Contact = () => {
+
 
   const email = "sanjay525522@gmail.com";
   const phone = "+91 9025979021";
@@ -34,10 +36,10 @@ const [formData, setFormData] = useState({
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation: check if any field is empty
+
     const { name, email, number, message } = formData;
     if (!name || !email || !number || !message) {
-     /*  alert("Please fill in all fields before submitting."); */
+
 
       setShow_W(true);
       return;
@@ -45,7 +47,7 @@ const [formData, setFormData] = useState({
 
     setResult("Sending...");
 
-    // Prepare FormData for Web3Forms
+
     const data = new FormData();
     data.append("access_key", "a657a70f-af70-4ffd-9d9d-7002f7015325");
     data.append("name", name);
@@ -63,9 +65,9 @@ const [formData, setFormData] = useState({
 
       if (resultData.success) {
         setResult("Form Submitted Successfully");
-        /* window.alert(resultData.message); */
+
         setShow_A(true);
-        setFormData({ name: "", email: "", number: "", message: "" }); // clear form
+        setFormData({ name: "", email: "", number: "", message: "" }); 
       } else {
         setResult("Error: " + resultData.message);
         console.log("Error", resultData);
@@ -76,8 +78,29 @@ const [formData, setFormData] = useState({
     }
   };
 
+
+  const sectionRef = useRef(null);
+
+  useEffect(()=>
+  {
+    const anim_elements = sectionRef.current.querySelectorAll('.anim');
+    const observer = new IntersectionObserver((entries)=>
+  {
+    
+     entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+     });
+  }, {threshold:"0.2"})
+
+  anim_elements.forEach((element)=> observer.observe(element))
+
+  },[])
+
   return (
-    <div id="Contact" className="contact">
+    <div ref={sectionRef} id="Contact" className="contact">
 
 
       <ToastContainer className=" position-fixed top-0  start-50 p-3" position={ 'top-center'} style={{ zIndex: 1 }}>
@@ -98,8 +121,7 @@ const [formData, setFormData] = useState({
 
 
       <div className="contact-title">
-        <h1 className='display-1 text-primary '>Get in touch</h1>
-      </div>
+        <h5 className='display-1 text-primary  position-relative vw-100 text-center overflow-hidden' >Get In Touch<p className='anim title-slide-down '>-</p> <p className='anim title-slide-up'>-</p></h5>      </div>
 
       <div className="contact-section">
         <div className="contact-left">

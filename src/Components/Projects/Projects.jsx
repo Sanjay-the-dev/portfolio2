@@ -1,18 +1,39 @@
 import React from 'react'
 import './projects.css'
+import { useRef, useEffect } from 'react'
 /* import theme_pattern from '../../assets/main assets/theme_pattern.svg' */
 import project_img1 from '../../assets/Project Images/e-commerce-img.png'
 import project_img2 from '../../assets/Project Images/wellness-img.png'
 import project_img3 from '../../assets/Project Images/jewellery-shop-img.png'
 
 const Projects = () => {
+
+    const sectionRef = useRef(null);
+  
+    useEffect(()=>
+    {
+      const anim_elements = sectionRef.current.querySelectorAll('.anim');
+      const observer = new IntersectionObserver((entries)=>
+    {
+      
+       entries.forEach((entry) => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+       });
+    }, {threshold:"0.2"})
+  
+    anim_elements.forEach((element)=> observer.observe(element))
+  
+    },[])
   return (
-    <div id='Projects' className='projects'>  
+    <div ref={sectionRef} id='Projects' className='projects'>  
 
             {/*   project -1  */}
 
       <div className="project-title">
-        <h1 className='display-1 text-primary '>Projects</h1>
+                <h5 className='display-1 text-primary  position-relative vw-100 text-center overflow-hidden' >Projects<p className='anim title-slide-down '>-</p> <p className='anim title-slide-up'>-</p></h5>
       </div>
 
 
@@ -92,7 +113,7 @@ const Projects = () => {
 
       <div className="project-content" >
 
-        <a href="https://wellness-and-habit-tracker.netlify.app">
+        <a href= "https://jewellery-shop3.netlify.app/">
         <img src={project_img3} alt="" className='project_img1'/>
         </a>
 

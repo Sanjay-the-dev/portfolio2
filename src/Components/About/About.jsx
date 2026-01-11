@@ -1,13 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './About.css'
+import { useRef } from 'react'
 /* import theme_pattern from '../../assets/main assets/theme_pattern.svg' */
 
 
 const About = () => {
+
+  const sectionRef = useRef(null);
+
+  useEffect(()=>
+  {
+    const anim_elements = sectionRef.current.querySelectorAll('.anim');
+    const observer = new IntersectionObserver((entries)=>
+  {
+    
+     entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+     });
+  }, {threshold:"0.2"})
+
+  anim_elements.forEach((element)=> observer.observe(element))
+
+  },[])
+
   return (
-    <div id='About' className='About'>
-        <div className="about-title">
-        <h5 className='display-1 text-primary ' >About Me</h5>
+
+
+    <div ref={sectionRef} id='About' className='About'>
+        <div className="about-titlew position-relative">
+        <h5 className='display-1 text-primary  position-relative vw-100  text-center overflow-hidden' >About Me <p className='anim title-slide-down '>-</p> <p className='anim title-slide-up'>-</p></h5>
 
         </div>
         <div className="about-section">

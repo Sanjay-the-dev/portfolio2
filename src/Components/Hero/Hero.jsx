@@ -2,7 +2,7 @@ import React from 'react'
 import './Hero.css'
 import { Link } from 'react-scroll';
 import downloadIcon from '../../assets/download-icon1.png'
-import resume_pdf from '../../assets/Resume/Sanjay_Frontend_developer_resume.pdf'
+import resume_pdf from '../../assets/Resume/Sanjay_Frontend_Developer_Resume.pdf'
 import { useRef , useEffect } from 'react';
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
 
          <p className='anim slide_to_down  ' style={{position:'relative',zIndex:"2"}}>
           I’m a <strong>Frontend Developer</strong> building responsive, accessible, <span > . </span>and modern web applications.
-          I work with React, Redux, Bootstrap, and Tailwind CSS.
+          I work with React, Redux Toolkit, Bootstrap, and Tailwind CSS.
           With a strong foundation in HTML, CSS, and JavaScript, I turn ideas into engaging digital experiences.
         </p>
         <div className="hero-action anim slide_btn  " style={{position:'relative',zIndex:"2"}}>

@@ -12,7 +12,8 @@
     
     position: relative;
     font-size: 3rem;
-    padding: 50px;
+
+    padding: 50px 0px;
 
 }
 .E-about-title-text{
@@ -46,6 +47,47 @@
     border-radius: 50px;
     margin: 0 0 16px 0;
 }
+
+
+   /*  // animation */
+
+.title-slide-down{
+    
+    display: inline-block;
+    position: absolute;
+    left:  -30%;
+    width: 80%;
+    color: transparent;
+    background-color: #0d6efd;
+    transform: skewx(50deg);
+    transition: transform 1.5s ease-in-out;
+    
+}
+.title-slide-down.visible{
+    
+
+    transform: skewx(50deg) translateY(105%);
+    
+}
+.title-slide-up{
+    
+    display: inline-block;
+    position: absolute;
+    right:  -30%;
+    width: 80%;
+    color: transparent;
+    background-color: #0d6efd;
+    transform: skewx(50deg);
+    transition: transform 1.5s ease-in-out ;
+    
+}
+.title-slide-up.visible{
+    
+
+    transform: skewx(50deg) translateY(-105%);
+    
+}
+
 
 
    /*  // Mobile View */
