@@ -2,7 +2,7 @@ import React from 'react'
 import './Hero.css'
 import { Link } from 'react-scroll';
 import downloadIcon from '../../assets/download-icon1.png'
-import resume_pdf from '../../assets/Resume/Sanjay_Frontend_Developer_Resume.pdf'
+import resume_pdf from '../../assets/Resume/SanjayResume.pdf'
 import { useRef , useEffect } from 'react';
 
 const Hero = () => {
