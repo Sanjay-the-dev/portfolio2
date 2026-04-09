@@ -24,7 +24,7 @@ const NavBar = () => {
       <ul className={`NavMenu ${isMenuOpen ? 'active' : ''}`}>
         <div className="nav-mob-close" onClick={closeMenu}>
           <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L24 24M24 1L1 24" stroke="white" strokeWidth="3" strokeLinecap="round" />
+            <path d="M1 1L24 24M24 1L1 24" stroke="#ff4d4d" strokeWidth="3" strokeLinecap="round" />
           </svg>
         </div>
 
@@ -32,12 +32,15 @@ const NavBar = () => {
         <li><Link className='E-nav-link' offset={-100} to='Skills' onClick={closeMenu}>Skills</Link></li>
         <li><Link className='E-nav-link' offset={-20} to='Experience' onClick={closeMenu}>Experience</Link></li>
         <li><Link className='E-nav-link' offset={-100} to='Projects' onClick={closeMenu}>Projects</Link></li>
-        {/*         <li><Link className='E-nav-link' offset={-20} duration={800} to='Contact' onClick={closeMenu}>Contact</Link></li> */}
 
-
+        <li className="mobile-btn-container">
+          <Link duration={700} to="Contact" className="ConnectBtnWrapper" onClick={closeMenu}>
+            <button className="ConnectWithMeBtn">Connect with me</button>
+          </Link>
+        </li>
       </ul>
 
-      <Link duration={700} to="Contact" className="ConnectBtnWrapper">
+      <Link duration={700} to="Contact" className="ConnectBtnWrapper desktop-btn">
         <button className="ConnectWithMeBtn">Connect with me</button>
       </Link>
     </nav>

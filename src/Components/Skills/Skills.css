@@ -93,8 +93,13 @@
 .delay-4 { transition-delay: 0.5s; }
 
 /* Global Animations (shared with Experience) */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .skills-section {
+        padding-bottom: 40px;
+    }
+
     .skills-grid-container {
         grid-template-columns: 1fr;
+        margin: 20px auto;
     }
 }
