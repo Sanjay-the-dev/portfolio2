@@ -125,13 +125,14 @@
     background-color: #01010c;
     color: transparent;
     transition: all 2.5s ease-in-out;
+    z-index: 40;
 
 }
 
 .slide_to_left.visible {
 
-    opacity: 1;
-    width: 0;
+    opacity: 0;
+    width: 5%;
 }
 
 .slide_to_down {
@@ -225,11 +226,12 @@
 
     .HeroSection p {
 
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: #ffffff;
         margin-bottom: 40px;
-        padding-left: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     .hero-action {

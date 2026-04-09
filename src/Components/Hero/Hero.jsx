@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <div ref={sectionRef} id='Home' className='HeroSection position-relative'>
 
-      <h1 className='postion-relative'>I'm Sanjay,<span className='anim  slide_to_left' >-</span></h1>
+      <h1 className='postion-relative'>I'm Sanjay,</h1>
 
       <p className='anim slide_to_down  ' style={{ position: 'relative', zIndex: "2" }}>
         Full Stack Developer
