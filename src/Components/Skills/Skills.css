@@ -1,0 +1,100 @@
+.skills-section {
+    padding: 15vh 0;
+    padding-top: 0;
+}
+
+.skills-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.skill-category-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+}
+
+.skill-category-card:hover {
+    border-color: #0d6efd;
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+.category-title {
+    color: #0d6efd;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(13, 110, 253, 0.3);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.skills-blob-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.skill-item:hover {
+    background: rgba(13, 110, 253, 0.15);
+    border-color: #0d6efd;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.skill-dot {
+    width: 8px;
+    height: 8px;
+    background: #0d6efd;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #0d6efd, 0 0 20px rgba(13, 110, 253, 0.4);
+    position: relative;
+}
+
+.skill-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* Specific Delay Logic */
+.delay-0 { transition-delay: 0.1s; }
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.4s; }
+.delay-4 { transition-delay: 0.5s; }
+
+/* Global Animations (shared with Experience) */
+@media (max-width: 600px) {
+    .skills-grid-container {
+        grid-template-columns: 1fr;
+    }
+}

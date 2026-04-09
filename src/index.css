@@ -1,16 +1,28 @@
 
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&family=Orbitron:wght@700&family=Poppins:wght@400;700&display=swap');
+
 body{
-   
     width: 100vw;
     height: 100vh;
     /* background-color: hsl(0, 0%, 11%); */
     background-color: #01010c;
-
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
-    font-family: "outfit";
+    font-family: "Montserrat", cursive;
     font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+}
+
+p {
+    color: rgb(245, 245, 245);
+    font-family: 'Inter', 'Poppins', Arial, sans-serif;
+    font-weight: 400;
 }
